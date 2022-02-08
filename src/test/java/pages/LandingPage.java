@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import stepDefinition.Steps;
+import utils.GetBrowser;
 import utils.Log;
 
 public class LandingPage {
@@ -20,7 +21,7 @@ public class LandingPage {
 	private WebElement searchElement;
 
 	public LandingPage() {
-		PageFactory.initElements(new AjaxElementLocatorFactory(Steps.driver, 20), this);
+		PageFactory.initElements(new AjaxElementLocatorFactory(GetBrowser.driver, 20), this);
 	}
 
 	public LandingPage acceptCookies() {
@@ -29,18 +30,18 @@ public class LandingPage {
 			Log.info("Accepted Cookies");
 		} catch (Exception e) {
 			Log.warn("Unable to accept cookies");
-			Steps.driver.quit();
+			GetBrowser.driver.quit();
 		}
 		return new LandingPage();
 	}
 
 	public LandingPage enterAndClick(String cityname) {
 		try {
-		new Actions(Steps.driver).sendKeys(searchElement, cityname).sendKeys(Keys.ENTER).build().perform();
-		Log.info("City Name Entered :" + cityname);
+		new Actions(GetBrowser.driver).sendKeys(searchElement, cityname).sendKeys(Keys.ENTER).build().perform();
+		Log.info("City Name Entered from UI :" + cityname);
 		}catch(Exception e) {
 			Log.warn("Unable to enter city name");
-			Steps.driver.quit();
+			GetBrowser.driver.quit();
 		}
 		return new LandingPage();
 	}

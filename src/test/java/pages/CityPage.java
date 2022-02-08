@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import stepDefinition.Steps;
+import utils.GetBrowser;
 import utils.Log;
 
 public class CityPage {
@@ -19,7 +20,7 @@ public class CityPage {
 	public static String getWeatherDetialFromUI;
 	
 	public CityPage() {
-		PageFactory.initElements(new AjaxElementLocatorFactory(Steps.driver, 20), this);
+		PageFactory.initElements(new AjaxElementLocatorFactory(GetBrowser.driver, 20), this);
 	}
 	
 	public CityPage getWeatherDetails() {
@@ -28,7 +29,7 @@ public class CityPage {
 		Log.info("Retrieved the temperature of the city");
 		}catch(Exception e) {
 			Log.warn("Unable to retrieve city name");
-			Steps.driver.quit();
+			GetBrowser.driver.quit();
 		}
 		return new CityPage();
 	}

@@ -10,6 +10,7 @@ import pages.CityPage;
 import pages.LandingPage;
 import resource.HttpMethods;
 import utils.FileReaderForUI;
+import utils.GetBrowser;
 import utils.Log;
 
 import org.apache.commons.lang3.Range;
@@ -19,26 +20,24 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Steps {
 	FileReaderForUI reader;
-	public static WebDriver driver;	
 
 	@Given("initiate the browser")
 	public void initiate_the_browser() {
-		WebDriverManager.chromedriver().setup();
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--disable-notifications");
-		driver = new ChromeDriver(options);
-		driver.manage().window().maximize();
+		Log.info("-----------Browser Opened---------------");
+		reader = new FileReaderForUI();
+		 new GetBrowser(reader.getValues("browser"));
 	}
 
 	@Then("close the browser")
 	public void close_the_browser() {
-		driver.quit();
+		Log.info("---------------Browser Closed--------------");
+		GetBrowser.driver.quit();
 	}
 
 	@Given("navigate to website")
 	public void navigate_to_website() {
 		reader = new FileReaderForUI();
-		driver.get(reader.getValues("url"));
+		GetBrowser.driver.get(reader.getValues("url"));
 	}
 
 	@Given("input the city {string} to check the weather")
@@ -54,6 +53,7 @@ public class Steps {
 	@Given("Getting the weather details for the {string} city")
 	public void getting_the_weather_details_for_the_city(String string) {
 		new HttpMethods().getMethod(string);
+		Log.info("CityName Entered from API :"+string);
 	}
 	
 	@Then("compare values from API and UI")
