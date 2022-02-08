@@ -1,0 +1,23 @@
+2022-02-08 14:57:50.552 [main] Log [INFO ]Accepted Cookies
+2022-02-08 14:57:50.868 [main] Log [INFO ]City Name Entered :Bangalore,Karnataka
+2022-02-08 14:57:52.341 [main] Log [WARN ]Unable to retrieve city name
+2022-02-08 14:57:56.073 [main] Log [INFO ]Weather details retrieved from UI :null
+2022-02-08 14:57:56.073 [main] Log [INFO ]Weather details retrieved from API :28.58
+2022-02-08 14:58:42.418 [main] Log [INFO ]Accepted Cookies
+2022-02-08 14:58:42.702 [main] Log [INFO ]City Name Entered :Delhi,Delhi,
+2022-02-08 14:58:47.073 [main] Log [INFO ]Retrieved the temperature of the city
+2022-02-08 14:58:47.948 [main] Log [INFO ]Weather details retrieved from UI :23
+2022-02-08 14:58:47.949 [main] Log [INFO ]Weather details retrieved from API :25.99
+2022-02-08 14:58:47.952 [main] Log [WARN ]Both the values are NOT in the acceptable range
+2022-02-08 15:00:26.458 [main] Log [INFO ]Accepted Cookies
+2022-02-08 15:00:26.795 [main] Log [INFO ]City Name Entered :Bangalore,Karnataka
+2022-02-08 15:00:31.565 [main] Log [INFO ]Retrieved the temperature of the city
+2022-02-08 15:00:35.612 [main] Log [INFO ]Weather details retrieved from UI :29
+2022-02-08 15:00:35.612 [main] Log [INFO ]Weather details retrieved from API :28.58
+2022-02-08 15:00:35.615 [main] Log [INFO ]Both the values are in the acceptable range
+2022-02-08 15:01:23.451 [main] Log [INFO ]Accepted Cookies
+2022-02-08 15:01:23.732 [main] Log [INFO ]City Name Entered :Delhi,Delhi,
+2022-02-08 15:01:30.386 [main] Log [INFO ]Retrieved the temperature of the city
+2022-02-08 15:01:31.424 [main] Log [INFO ]Weather details retrieved from UI :23
+2022-02-08 15:01:31.425 [main] Log [INFO ]Weather details retrieved from API :25.99
+2022-02-08 15:01:31.425 [main] Log [WARN ]Both the values are NOT in the acceptable range
