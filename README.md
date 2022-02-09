@@ -22,4 +22,3 @@
 - Go to TestRunner.class > Right-click > RunAs > JUnit
 - Logs are generated in Log4J folder, It indicates whether the values are in range or not
 - Reports are generated in Reports folder, it indicates whether the test case is passed or Failed
-- 
